@@ -1,35 +1,13 @@
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Blogs from "./pages/Blogs.jsx";
-import Bookmarks from "./pages/Bookmarks.jsx";
-import MainLayout from "./layouts/MainLayout.jsx";
-import Home from "./pages/Home.jsx";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import { Toaster } from 'react-hot-toast'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './routes/Routes'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <MainLayout></MainLayout>,
-    children: [
-      {
-        path: '/',
-        element: <Home></Home>
-      },
-      {
-        path: '/blogs',
-        element: <Blogs></Blogs>
-      },
-      {
-        path: '/bookmarks',
-        element: <Bookmarks></Bookmarks>
-      },
-    ],
-  },
- 
-]);
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <>
-    <RouterProvider router={router}></RouterProvider>
-  </>
-);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Toaster />
+    <RouterProvider router={router} />
+  </React.StrictMode>
+)
