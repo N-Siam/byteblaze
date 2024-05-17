@@ -2,7 +2,7 @@
 
 Live site:
 
-- [ByteBlaze](https://byte-blaze.netlify.app/)
+- [ByteBlaze](cs-byte-blaze.surge.sh)
 
 Resources:
 
